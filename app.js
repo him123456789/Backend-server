@@ -15,7 +15,7 @@ app.use(
     useTempFiles: true,
   })
 );
-app.use(cors());
+app.use(cors({credentials:true,origin:"http://localhost:3000"}));
 
 app.use("/api/v1", User);
 
